@@ -1,0 +1,15 @@
+<div class="example-container">
+    <mat-form-field hintLabel="Max 10 characters" appearance="fill">
+      <mat-label>Insira um Texto</mat-label>
+      <input matInput #input maxlength="10" placeholder="Hello">
+      <mat-hint align="end">{{input.value.length}}/10</mat-hint>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>UF</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let state of states" value="state.id">{{state.siglaUf}}</mat-option>
+      </mat-select>
+      <mat-hint align="end">Selecione um Estado clicando na seta ^</mat-hint>
+    </mat-form-field>
+  </div>
